@@ -39,23 +39,23 @@ body {
 
 #right {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 75%;
     width: 20%;
     height: 50%;
     background-color: #ffffff94;
     border-radius: 4%;
+    box-shadow: 0px 0px 10px 4px rgb(0,0,0,0.2);
 }
 
 .text {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 30%;
     width: 40%;
     min-height: 40%;
     background-color: blue;
     border-radius: 4%;
-
 }
 
 li {
@@ -67,6 +67,10 @@ li {
     margin-left: 4%;
     font-family: 黑体;
     margin-top:0.5% ;
+}
+
+li:hover {
+    color: black;
 }
 
 h1{
@@ -89,3 +93,38 @@ span {
     border-radius: 50%;
 }
 
+#right #head_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url("../IMG/dog.png");
+    background-size: cover;
+    margin-left: 28%;
+    margin-top: 8%;
+}
+
+#right i {
+    margin-left: 20%;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.2);
+    margin: 5% 0 5% 0;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.one {
+    font-family: 黑体;
+    margin-left: 42%;
+}
+
+.two {
+    font-family: 黑体;
+    margin-left: 3%;
+}
