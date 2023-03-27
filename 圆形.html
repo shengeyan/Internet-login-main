@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title> CSS3实现涟漪呼吸扩散动画效果 </title>
+    
+</head>
+<style>
+body{
+    background: #ccc;
+}
+.live{
+    border: 1px solid red;
+   position: relative;
+   width: 100px;
+   height: 100px;
+   margin:50px auto;
+}
+.live .span1{
+   border:1px solid blue;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   z-index: 0;
+   margin-top: 0px;
+}
+@keyframes animate {
+    0%{
+        transform: scale(1);
+        opacity: 0.5;  
+    }
+    50%{
+        transform: scale(1.5);  
+        opacity: 0;   /*圆形放大的同时，透明度逐渐减小为0*/
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+.live span{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-animation: animate 3s linear infinite;
+    z-index: -1;
+}
+.live span:nth-child(2){
+    -webkit-animation-delay: 1.5s; /*第二个span动画延迟1.5秒*/
+}
+</style>
+<body>
+    <div class="live">
+         <!-- 这里的p标签可以换成一个img标签，用一个圆形的图片放在中间，周围实现扩散的效果图-->
+         <!-- <img src="" alt=""> -->
+         <p class="span1"></p>
+         <span></span>
+         <span></span>
+     </div>
+ <script type="text/javascript">
+ </script>
+</body>
