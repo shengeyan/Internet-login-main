@@ -4,9 +4,9 @@ function way(){
     canvar.width=window.innerWidth;
     canvar.height=window.innerHeight;
 
-    const Num=100;
+    const Num=150;
     const line=120;
-    const colorRGB='254,250,224';
+    const colorRGB='0,0,0';
     let par=[];
     let interactionParticle =null;
     //创建粒子类
@@ -52,7 +52,7 @@ function way(){
             let y=Math.random()*canvar.height;
             let v_x=getRandomNum(-2,2);
             let v_y=getRandomNum(-2,2);
-            let color='rgba(${colorRGB},${1-size/3})';
+            let color=`rgba(${colorRGB},${1-size/3})`;
             par.push(new li_zi(x,y,v_x,v_y,size,color));
         
         }
@@ -75,7 +75,7 @@ function way(){
                 const two=par[j];
                 let dist=Math.sqrt(Math.pow(one.x-two.x,2)+Math.pow(one.y-two.y,2));
                 if(dist<line){
-                    ctx.stockStyle ="rgba(${colorRGB},${1-dist/Num})";
+                    ctx.strokeStyle = `rgba(${colorRGB}, ${1 - dist / line})`;
                     ctx.beginPath();
                     ctx.lineWidth = .8;
                     ctx.moveTo(one.x,one.y);
