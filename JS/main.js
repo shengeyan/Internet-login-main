@@ -6,7 +6,7 @@ i_s[0].addEventListener("click",function(){
 })
 
 i_s[1].addEventListener("click",function(){
-    window.location.href="https://github.com/shengeyan?tab=repositories";
+    window.location.href="https://im.qq.com/index/";
 })
 
 for(var i=0;i<li_s.length;i++){
