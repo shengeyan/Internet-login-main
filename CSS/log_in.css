@@ -2,6 +2,7 @@ body {
     width: 100%;
     height: 100%;
     background:linear-gradient(to right,#CFE7F8,#E2C9D8);
+    display: flex;
     /* position: relative; */
 }
 
@@ -15,6 +16,7 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 20px;
+    display: flex;
 }
 
 #left {
