@@ -1,0 +1,91 @@
+body {
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0;
+}
+
+#big {
+    width: 100%;
+    height: auto;
+}
+
+#up {
+    width: 100%;
+    height: 970px;
+
+    background: url("../IMG/img_girl.png") no-repeat;
+}
+
+#top {
+    width: 100%;
+    height: 4%;
+    background-color:rgba(0,0,0,0.2);
+}
+
+#center {
+    width: 100%;
+    height: 95%;
+    position: relative;
+}
+
+#down {
+    width: 100%;
+    min-height: 970px;
+    height: auto;
+    background-color: white;
+    position: relative;
+}
+
+#right {
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    width: 20%;
+    height: 50%;
+    background-color: #ffffff94;
+    border-radius: 4%;
+}
+
+.text {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    min-height: 40%;
+    background-color: blue;
+    border-radius: 4%;
+
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+    width: 3%;
+    color: #fff;
+    margin-left: 4%;
+    font-family: 黑体;
+    margin-top:0.5% ;
+}
+
+h1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%,-50%);
+    font-size: 300%;
+}
+
+span {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-42%,-50%);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+

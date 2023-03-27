@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小球曲线运动（sin）</title>
+		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<!--给小球设置样式-->
+		<style>
+			#ball{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background-color: deepskyblue;
+				position: fixed;
+				left: 0px;
+				top:300px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<i class="fa fa-github"></i>
+		<div id="ball"></div>
+		<script>
+			//获得元素
+			var oBall= document.getElementById('ball');
+			
+			//定义变量
+			//小球的横向坐标，也是角度的变化
+			var x=0;
+			var startY =300;
+			var y=0;
+			//控制每隔10毫秒，执行一个函数
+			setInterval(function(){
+				
+				x++;
+				//根据角度x 求出sin的值  来画正弦曲线（sin）
+				//这里的加号是先向上进行曲线运动
+				//如果是减号的话，则是先向下运动
+				//这里的sin（）括号里面的值，是为了得到x角度的值，方便进行计算
+				//后面结果最后，乘以了200，是因为这里的sin的最大值是1，这里如果，只是向上或者向下进行
+				//上下两像素的位置的正弦曲线运动的话是看不出结果的，所以这里我们将结果扩大来处理，
+				//就是方便为了观察运动效果
+				
+				y=startY - Math.sin(x * 2 * Math.PI / 360)*200;
+				
+				//这里是设置小球的位置，
+				oBall.style.left= x + "px";
+				oBall.style.top= y + "px";
+			},1000/60)
+			//最后这里的参数，是设置的时间，单位是毫秒，
+			//也就是控制多久执行这个函数体里面的函数的间隔时间
+		</script>
+	</body>
+</html>
