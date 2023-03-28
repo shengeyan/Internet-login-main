@@ -10,7 +10,7 @@ function Sakura(x, y, s, r, fn) {
     this.r = r;
     this.fn = fn;
 }
-/
+//樱花动作画布
 Sakura.prototype.draw = function(cxt) {
     cxt.save();
     var xc = 40 * this.s / 4;
@@ -19,6 +19,7 @@ Sakura.prototype.draw = function(cxt) {
     cxt.drawImage(img, 0, 0, 40 * this.s, 40 * this.s)
     cxt.restore();
 }
+//樱花更新动作
 Sakura.prototype.update = function() {
     this.x = this.fn.x(this.x, this.y);
     this.y = this.fn.y(this.y, this.y);
@@ -38,29 +39,35 @@ Sakura.prototype.update = function() {
         }
     }
 }
+//樱花数组
 SakuraList = function() {
     this.list = [];
 }
+//将樱花推入数组
 SakuraList.prototype.push = function(sakura) {
     this.list.push(sakura);
 }
+//樱花数组每一个进行更新
 SakuraList.prototype.update = function() {
     for (var i = 0, len = this.list.length; i < len; i++) {
         this.list[i].update();
     }
 }
+//樱花数组每一个进行绘画
 SakuraList.prototype.draw = function(cxt) {
     for (var i = 0, len = this.list.length; i < len; i++) {
         this.list[i].draw(cxt);
     }
 }
+//得到樱花数据的某一个元素
 SakuraList.prototype.get = function(i) {
     return this.list[i];
 }
+//得到樱花数组长度
 SakuraList.prototype.size = function() {
     return this.list.length;
 }
-
+//随机函数
 function getRandom(option) {
     var ret, random;
     switch (option) {
@@ -100,7 +107,7 @@ function getRandom(option) {
     }
     return ret;
 }
-
+//樱花开始函数
 function startSakura() {
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
     var canvas = document.createElement('canvas'), cxt;
@@ -136,13 +143,15 @@ function startSakura() {
         stop = requestAnimationFrame(arguments.callee);
     })
 }
+//触发事件函数
 window.onresize = function() {
     var canvasSnow = document.getElementById('canvas_snow');
 }
+//图片加载
 img.onload = function() {
     startSakura();
 }
-
+//停止函数
 function stopp() {
     if (staticx) {
         var child = document.getElementById("canvas_sakura");
