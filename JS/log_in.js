@@ -57,7 +57,7 @@ for(var i=0;i<lis.length;i++){
 bt.addEventListener("click",function(){
     if(pan2(em_nb.value,passwd.value)){
         switch (pan(em_nb.value,passwd.value)) {
-            case 0:window.location.href="http://www.baidu.com/";break;
+            case 0:window.location.href="../HTML/main.html";break;
             case 1:alert("密码错误");break;
             case 2:alert("账号错误");break;
             case 3:alert("输入错误");break;

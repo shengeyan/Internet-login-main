@@ -40,7 +40,7 @@ body {
     position: absolute;
     top: 5%;
     left: 75%;
-    width: 20%;
+    width: 17%;
     height: 50%;
     background-color: #ffffff94;
     border-radius: 4%;
@@ -48,7 +48,7 @@ body {
 }
 
 #canvas {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,0.1);
@@ -62,9 +62,12 @@ body {
     min-height: 40%;
     background-color: blue;
     border-radius: 4%;
-    z-index: +1;
-
 }
+
+#text_two {
+    top: 47%;
+}
+
 
 li {
     list-style: none;
@@ -95,7 +98,7 @@ span {
     height: 500px;
     position: absolute;
     top: 23%;
-    left: 39%;
+    left: 37%;
     transform: translate(-42%,-50%);
     background-color: rgba(255,255,255,0.2);
     border-radius: 50%;
@@ -133,7 +136,7 @@ span:nth-child(4){
     border-radius: 50%;
     background-image: url("../IMG/dog.png");
     background-size: cover;
-    margin-left: 28%;
+    margin-left: 27%;
     margin-top: 8%;
 }
 
@@ -155,7 +158,7 @@ h3 {
 
 .one {
     font-family: 黑体;
-    margin-left: 42%;
+    margin-left: 41%;
 }
 
 .two {
