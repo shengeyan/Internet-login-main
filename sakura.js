@@ -1,6 +1,6 @@
 var stop, staticx;
 var img = new Image();
-img.src = 
+img.src = "./IMG/biaoqing.png";
 
 //创建樱花元素
 function Sakura(x, y, s, r, fn) {
@@ -131,7 +131,7 @@ function startSakura() {
         sakura = new Sakura(randomX,randomY,randomS,randomR,{
             x: randomFnx,
             y: randomFny,
-            r: randomFnR
+            r: randomR
         });
         sakura.draw(cxt);
         sakuraList.push(sakura);
