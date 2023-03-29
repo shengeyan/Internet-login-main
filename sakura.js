@@ -22,7 +22,7 @@ Sakura.prototype.draw = function(cxt) {
 //樱花更新动作
 Sakura.prototype.update = function() {
     this.x = this.fn.x(this.x, this.y);
-    this.y = this.fn.y(this.y, this.y);
+    this.y = this.fn.y(this.x,this.y);
     this.r = this.fn.r(this.r);
     if (this.x > window.innerWidth || this.x < 0 || this.y > window.innerHeight || this.y < 0) {
         this.r = getRandom('fnr');
@@ -131,7 +131,7 @@ function startSakura() {
         sakura = new Sakura(randomX,randomY,randomS,randomR,{
             x: randomFnx,
             y: randomFny,
-            r: randomR
+            r: randomFnR
         });
         sakura.draw(cxt);
         sakuraList.push(sakura);
