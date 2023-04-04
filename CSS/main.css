@@ -68,6 +68,16 @@ body {
     top: 47%;
 }
 
+#add {
+    background-color: red;
+    width: 100%;
+    min-height: 970px;
+}
+
+#add div img {
+
+}
+
 
 li {
     list-style: none;

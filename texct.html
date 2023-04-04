@@ -20,6 +20,12 @@
 			body {
 				overflow: hidden;
 				background: white;
+				position: relative;
+			}
+
+			embed {
+				position: absolute;
+				/* z-index: 3; */
 			}
 
 			/* #canvas {
@@ -32,13 +38,22 @@
 		</style>
 	</head>
 	<body>
+
+		<!-- <embed id="svg" src="../Internet-login-main/Paaatterns/SVG/Clarence.svg" type="image/svg+xml"> -->
 		<!-- <canvas id="canvas"></canvas> -->
 		<!-- <canvas id="canvas_snow"></canvas>
 		<i class="fa fa-github"></i> -->
+		<!-- <img src="../Internet-login-main/Paaatterns/SVG/Clarence.svg" alt=""> -->
 		<div id="ball"></div>
 		<script>
 			//获得元素
+			
 			var oBall= document.getElementById('ball');
+			// var em=document.getElementById("svg");
+
+			// em.addEventListener("click",function(){
+			// 	alert("121")
+			// })
 			
 			//定义变量
 			//小球的横向坐标，也是角度的变化
