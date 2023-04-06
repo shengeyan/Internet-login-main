@@ -68,16 +68,26 @@ body {
     top: 47%;
 }
 
-#add {
-    background-color: red;
+.add {
     width: 100%;
     min-height: 970px;
 }
 
-#add div img {
-
+.swiper {
+    width: 600px;
+    height: 300px;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
 }
 
+.swiper-button-prev {
+color: rgba(255,255,255,0.2);
+}
+
+.swiper-button-next {
+color: rgba(255,255,255,0.2);
+}
 
 li {
     list-style: none;

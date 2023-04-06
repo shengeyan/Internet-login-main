@@ -11,11 +11,6 @@ var mySwiper = new Swiper ('.swiper', {
         disableOnInteraction: false,
     },
 
-    // 如果需要分页器
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
     // 如果需要前进后退按钮
     navigation: {
       nextEl: '.swiper-button-next',
@@ -23,20 +18,22 @@ var mySwiper = new Swiper ('.swiper', {
     },
 })
 
-i_s[0].addEventListener("click",function(){
-    window.location.href="https://github.com/shengeyan?tab=repositories";
-})
-
-i_s[1].addEventListener("click",function(){
-    window.location.href="https://im.qq.com/index/";
-})
-
-for(var i=0;i<li_s.length;i++){
-    li_s[i].addEventListener("click",function(){
-        window.location.href="https://shengeyan.gitee.io/";
+//链接添加函数
+function a (){
+    i_s[0].addEventListener("click",function(){
+        window.location.href="https://github.com/shengeyan?tab=repositories";
     })
+    
+    i_s[1].addEventListener("click",function(){
+        window.location.href="https://im.qq.com/index/";
+    })
+    
+    for(var i=0;i<li_s.length;i++){
+        li_s[i].addEventListener("click",function(){
+            window.location.href="https://shengeyan.gitee.io/";
+        })
+    }    
 }
-
 //粒子效果函数
 function way(){
     const canvar =document.getElementById("canvas");
@@ -150,3 +147,4 @@ function way(){
 }
 
 way()
+a()
