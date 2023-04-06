@@ -1,6 +1,28 @@
 var i_s =document.getElementsByTagName("i");
 var li_s=document.getElementsByTagName("li");
 
+var mySwiper = new Swiper ('.swiper', {
+    autoplay:true,//等同于以下设置
+    direction: 'horizontal', // 水平切换
+    loop: true, // 循环模式选项
+    mousewheel: true,//鼠标滚轮
+    autoplay: {
+        delay: 1000,//1秒切换一次
+        disableOnInteraction: false,
+    },
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+
 i_s[0].addEventListener("click",function(){
     window.location.href="https://github.com/shengeyan?tab=repositories";
 })
