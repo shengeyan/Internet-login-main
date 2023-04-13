@@ -6,6 +6,7 @@ var mySwiper = new Swiper ('.swiper', {
     direction: 'horizontal', // 水平切换
     loop: true, // 循环模式选项
     mousewheel: true,//鼠标滚轮
+    centeredSlides: true,
     autoplay: {
         delay: 1000,//1秒切换一次
         disableOnInteraction: false,
