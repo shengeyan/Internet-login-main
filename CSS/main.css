@@ -199,6 +199,28 @@ h3 {
 
 #addTwo {
     width: 100%;
-    min-height: 970px;
-    background-color: red;
+    min-height: 600px;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    padding-top: 100px;
+}
+
+#v_1 {
+    left: 100px;
+}
+
+#v_2 {
+    left: 200px;
+}
+
+#v_3 {
+    left: 300px;
+}
+
+#addTwo img {
+    position: absolute;
+    margin-top: 100px;
 }

@@ -1,5 +1,6 @@
 var i_s =document.getElementsByTagName("i");
 var li_s=document.getElementsByTagName("li");
+var videos=document.getElementsByTagName('video');
 
 var mySwiper = new Swiper ('.swiper', {
     autoplay:true,//等同于以下设置
@@ -18,6 +19,8 @@ var mySwiper = new Swiper ('.swiper', {
       prevEl: '.swiper-button-prev',
     },
 })
+
+
 
 //链接添加函数
 function a (){
@@ -149,3 +152,14 @@ function way(){
 
 way()
 a()
+for(let i=0;i<videos.length;i++){
+    videos[i].addEventListener('mouseover',function(){
+        setTimeout(() => {
+            videos[i].play();   
+        }, 1);
+        
+    })
+    videos[i].addEventListener('click',function(){
+        videos[i].pause();
+    })
+}
