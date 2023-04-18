@@ -115,7 +115,7 @@ li:hover {
     color: black;
 }
 
-h1{
+#hello{
     margin: 0;
     position: absolute;
     top: 50%;
@@ -129,7 +129,7 @@ span {
     height: 500px;
     position: absolute;
     top: 23%;
-    left: 37%;
+    left: 39%;
     transform: translate(-42%,-50%);
     background-color: rgba(255,255,255,0.2);
     border-radius: 50%;
@@ -203,24 +203,43 @@ h3 {
     position: relative;
 }
 
-video {
+#v1 {
     position: absolute;
-    padding-top: 100px;
+    left: 500px;
 }
 
-#v_1 {
-    left: 100px;
-}
-
-#v_2 {
-    left: 200px;
-}
-
-#v_3 {
-    left: 300px;
-}
-
-#addTwo img {
+#v2 {
     position: absolute;
-    margin-top: 100px;
+    left: 800px;
 }
+
+#v3 {
+    position: absolute;
+    left: 1100px;
+}
+
+#addTwo div img {
+    position: absolute;
+    top: 46px;
+}
+
+#addTwo :nth-child(2){ 
+    left: 692px;
+}
+
+#addTwo :nth-child(4){ 
+    left: 982px;
+}
+
+.addTextOne {
+    margin-top: 60px;
+    text-align: center;
+}
+
+#addTwo div {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 200px;
+}
+
