@@ -1,6 +1,8 @@
 var i_s =document.getElementsByTagName("i");
 var li_s=document.getElementsByTagName("li");
 var videos=document.getElementsByTagName('video');
+var texts=document.getElementsByClassName('text');
+var game=document.getElementById("game");
 
 var mySwiper = new Swiper ('.swiper', {
     autoplay:true,//等同于以下设置
@@ -20,7 +22,65 @@ var mySwiper = new Swiper ('.swiper', {
     },
 })
 
+// 展示框展开与缩小动画
+function textBig(i){
+    texts[i].style.height='30%';
+    const child = texts[i].children[2];
+    child.style.display="block";
+    switch(i) {
+        case 0:
+            texts[1].style.top="41%";
+            texts[2].style.top="58%";
+            texts[3].style.top="75%";
 
+            break;
+        case 1:
+            texts[2].style.top="58%";
+            texts[3].style.top="75%";
+            break;
+        case 2:
+            texts[3].style.top="75%";
+            break;
+    }
+}
+function textSmall(i){
+    texts[i].style.height='15%';
+    const child = texts[i].children[2];
+    child.style.display="none";
+    for(let j=i+1;j<texts.length;j++){
+        switch(i) {
+            case 0:
+                texts[1].style.top="26%";
+                texts[2].style.top="43%";
+                texts[3].style.top="60%";
+                break;
+            case 1:
+                texts[2].style.top="43%";
+                texts[3].style.top="60%";
+                break;
+            case 2:
+                texts[3].style.top="60%";
+                break;
+        }
+    }
+}
+
+for(let i=0;i<texts.length;i++){
+    texts[i].addEventListener('mouseover',function(){
+        textBig(i);
+    });
+    texts[i].addEventListener('mouseout',function(){
+        textSmall(i);
+    });
+}
+//游戏天地锚点
+game.addEventListener("click",function(){
+    const link = document.createElement('a');
+    link.href = '#addThird';
+    document.body.appendChild(link);
+    link.click();
+    // location.hash = '#addThird';
+})
 
 //链接添加函数
 function a (){
