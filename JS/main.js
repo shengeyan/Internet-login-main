@@ -3,7 +3,13 @@ var li_s=document.getElementsByTagName("li");
 var videos=document.getElementsByTagName('video');
 var texts=document.getElementsByClassName('text');
 var game=document.getElementById("game");
+var h1s=document.getElementsByTagName("h1");
 
+h1s[h1s.length-1].addEventListener('click',function(){
+    window.location.href="../HTML/game.html";
+})
+
+//轮播图
 var mySwiper = new Swiper ('.swiper', {
     autoplay:true,//等同于以下设置
     direction: 'horizontal', // 水平切换
@@ -64,7 +70,6 @@ function textSmall(i){
         }
     }
 }
-
 for(let i=0;i<texts.length;i++){
     texts[i].addEventListener('mouseover',function(){
         textBig(i);
@@ -84,17 +89,66 @@ game.addEventListener("click",function(){
 
 //链接添加函数
 function a (){
-    i_s[0].addEventListener("click",function(){
-        window.location.href="https://github.com/shengeyan?tab=repositories";
+    i_s[1].addEventListener("click",function(){
+
+        if (navigator.onLine) {
+            // 在线状态，跳转到第一个页面
+            window.location.href="https://github.com/shengeyan?tab=repositories";
+          } else {
+            // 离线状态，跳转到第二个页面
+            window.location.href = '../HTML/log_in.html';
+          }
+        //   function checkNetworkStatus(url) {
+        //     return new Promise((resolve, reject) => {
+        //       const xhr = new XMLHttpRequest();
+        //       xhr.open('HEAD', url);
+        //       xhr.onload = () => {
+        //         if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+        //           resolve(true);
+        //         } else {
+        //           resolve(false);
+        //         }
+        //       };
+        //       xhr.onerror = () => {
+        //         reject(new Error('Network error'));
+        //       };
+        //       xhr.send();
+        //     });
+        //   }
+          
+        //   checkNetworkStatus('https://github.com/shengeyan?tab=repositories').then(hasNetwork => {
+        //     if (hasNetwork) {
+        //       // 连接网络，跳转到第一个页面
+        //       window.location.href="https://github.com/shengeyan?tab=repositories";
+        //     } else {
+        //       // 离线状态，跳转到第二个页面
+        //       window.location.href = '../HTML/log_in.html';
+        //     } 
+        //   }).catch(error => {
+        //     console.error(error);
+        //   });
+
     })
     
-    i_s[1].addEventListener("click",function(){
+    i_s[2].addEventListener("click",function(){    
+        if (navigator.onLine) {
+        // 在线状态，跳转到第一个页面
         window.location.href="https://im.qq.com/index/";
+      } else {
+        // 离线状态，跳转到第二个页面
+        window.location.href = '../HTML/log_in.html';
+      }
     })
     
     for(var i=0;i<li_s.length;i++){
         li_s[i].addEventListener("click",function(){
-            window.location.href="https://shengeyan.gitee.io/";
+            if (navigator.onLine) {
+                // 在线状态，跳转到第一个页面
+                window.location.href="https://shengeyan.gitee.io/";
+              } else {
+                // 离线状态，跳转到第二个页面
+                window.location.href = '../HTML/log_in.html';
+              }
         })
     }    
 }

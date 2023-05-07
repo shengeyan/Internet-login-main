@@ -1,3 +1,20 @@
+var cards=document.getElementsByClassName("card")
+var details=document.getElementsByClassName("detail")
+var buttons=document.getElementsByTagName("button")
+var items=document.getElementsByClassName("item")
+
+for(let i=0;i<cards.length;i++){
+    cards[i].addEventListener('mouseover',function name(params) {
+        details[i].style.display="flex";
+        details[i].style.justifyContent='center';
+        details[i].style.alignItems='center';
+    })
+    cards[i].addEventListener('mouseout',function name(params) {
+        details[i].style.display="none";
+    })
+}
+
+
 document.addEventListener("mousemove",(e)=>{
     // 鼠标位置
     let mouseX = e.x;

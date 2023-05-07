@@ -283,3 +283,23 @@ h3 {
     margin-right: 20px;
 }
 
+.fly:hover {
+    animation: flying ease 0.5s infinite alternate;
+}
+
+@keyframes flying {
+    0% {
+        /* transform: rotate(-45deg); */
+        transform: translate(0,0);
+      }
+      50% {
+        /* transform: rotate(0); */
+        transform: translate(-50px,100px);
+
+      }
+      100% {
+        /* transform: rotate(45deg); */
+        transform: translate(200px,-50px);
+
+      }
+}

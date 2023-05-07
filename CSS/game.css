@@ -3,74 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    background: #ed863d;
-} */
 
 body {
     margin: 0;
+    background-color: rgba(0, 0, 0,0.1);
 }
 
-/* h1 {
-    text-align: center;
-}
-
-h1:nth-of-type(1) {
-    background: #ed863d;
-   
-} */
-
-.content {
-    /* margin: auto; */
-    color: #FFF;
-    display: flex;
-    font-size: 60px;
-    font-weight: bolder;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-}
-.content .txt{
-    animation: animate ease 0.5s infinite alternate;
-    animation-delay: calc(var(--i) / 10 * 1s);
-}
-@keyframes animate{
-    100%{
-        color: #0e100f;
-        filter: drop-shadow(0 0 10px #91c5b0);
-        transform: translateY(50px);
-    }
-}
-
-.oneGame {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ed863d;
-}
+/* ---------------第二部分--------------------- */
 .twoGame {
     width: 100%;
-    height: 50vh;
-    margin-top: 10rem;
+    height: 56vh;
+    padding-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0,0.1);
 }
 
 .card {
-        width: 60%;
-        height: 90%;
+        width: 50vw;
+        height: 50vh;
         margin: 0 50px;
-        margin-top: 10em;
+        margin-top: 32vh;
         transform: translateY(-50%);
         position: relative;
 }
@@ -80,6 +34,10 @@ h1:nth-of-type(1) {
     width: 100%;
     left: 0;
     transition: 0.5s;
+}
+
+.font {
+    display: none;
 }
 
 .feng {
@@ -105,22 +63,83 @@ h1:nth-of-type(1) {
     bottom: 0;
 }
 .card:hover .font {
+    display: block;
     transform: perspective(500px) translate3d(0,-25px,50px);
 }
-/*
-body{
-    height: 100vh;
+
+.contentKuo {
+    display: flex;
+    background-color: rgba(0, 0, 0,0.1);
+}
+.contentTwo{
+    margin: auto;
+    color: rgba(0, 0, 0,0.1);
+    font-size: 70px;
+    font-weight:bolder;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ed863d;
-} */
+}
+.contentTwo::before{
+    content:"选择你的英雄";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid rgba(0, 0, 0,0.1);
+    animation: animateTwo 8s linear infinite;
+    filter:drop-shadow(0 0 50px  rgba(0, 0, 0,0.1))
+}
+@keyframes animateTwo {
+    0%{
+        width: 0;
+    }
+    100%{
+       width: 100%;
+    }
+}
+/* ---------------第一部分--------------------- */
+.content {
+    color: #FFF;
+    display: flex;
+    font-size: 60px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: rgba(0, 0, 0,0.1);
+}
+.content .txt{
+    animation: animateOne ease 0.5s infinite alternate;
+    animation-delay: calc(var(--i) / 10 * 1s);
+}
+@keyframes animateOne{
+    100%{
+        color: #0e100f;
+        filter: drop-shadow(0 0 10px #91c5b0);
+        transform: translateY(50px);
+    }
+}
+
+.oneGame {
+    height: 56vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0,0.1);
+}
+
 .box{
     display: grid;
     grid-template-columns: repeat(7,40px);
     grid-template-rows: repeat(7,40px);
     grid-gap: 1.5rem;
 }
+
 .item{
     background: black;
     border-radius: 5px;
@@ -143,3 +162,40 @@ body{
 .item::before{
   bottom: 25px;
 }
+
+.div {
+    background-color: rgba(0, 0, 0,0.1);
+    display: flex;
+}
+
+#button {
+    margin: auto;
+    margin-top: 10px;
+    height: 3vh;
+    width: 5vw;
+}
+
+/* -------------卡牌游戏问题描述------------------------- */
+.txtDetail {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    background-color: rgba(0, 0, 0,0.1);
+}
+.detail {
+    display: none;
+    width: 50vw;
+    height: 18vh;
+    position: absolute;
+    left:0; 
+    right:0; 
+    top:0; 
+    bottom:0;
+    margin: auto;
+    background-color: rgba(0, 0, 0,0.1);
+    border-radius: 2%;
+}
+h1 {
+    margin: 0 10px;
+}
+
