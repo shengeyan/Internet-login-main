@@ -45,9 +45,19 @@
 		<i class="fa fa-github"></i> -->
 		<!-- <img src="../Internet-login-main/Paaatterns/SVG/Clarence.svg" alt=""> -->
 		<div id="ball"></div>
+		<button></button>
 		<script>
 			//获得元素
-			
+			var button=document.getElementsByTagName("button")
+			button[0].addEventListener("click",function(){
+				if(navigator.onLine){
+					alert("111");
+				}else{
+					alert("000");
+				}
+			})
+
+
 			var oBall= document.getElementById('ball');
 			// var em=document.getElementById("svg");
 

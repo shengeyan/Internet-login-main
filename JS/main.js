@@ -90,7 +90,6 @@ game.addEventListener("click",function(){
 //链接添加函数
 function a (){
     i_s[1].addEventListener("click",function(){
-
         if (navigator.onLine) {
             // 在线状态，跳转到第一个页面
             window.location.href="https://github.com/shengeyan?tab=repositories";
@@ -127,7 +126,6 @@ function a (){
         //   }).catch(error => {
         //     console.error(error);
         //   });
-
     })
     
     i_s[2].addEventListener("click",function(){    
@@ -263,7 +261,7 @@ function way(){
     animate();
    
 }
-
+//飘落动画
 function fly(){
     var stop, staticx;
     var img = new Image();
